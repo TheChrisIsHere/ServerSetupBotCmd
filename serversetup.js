@@ -203,7 +203,7 @@ await msg.edit("Creating General Channels...")
                     }]
             }).then(cat => {
               message.guild.channels.create('💬 || General-Chat ', {
-                type: 'GUILD_VOICE',
+                type: 'GUILD_TEXT',
                 parent: cat.parentID,
                 permissionOverwrites: [
                     {
@@ -215,7 +215,7 @@ await msg.edit("Creating General Channels...")
                 // cat.setPosition('0')
               })
               message.guild.channels.create('📸 || Media-Share ', {
-                type: 'GUILD_VOICE',
+                type: 'GUILD_TEXT',
                 parent: cat.parentID,
                 permissionOverwrites: [
                     {
@@ -253,7 +253,7 @@ await msg.edit("Creating Music Channels...")
                     }]
             }).then(cat => {
               message.guild.channels.create('🎵 || Music-Commands ', {
-                type: 'GUILD_VOICE',
+                type: 'GUILD_TEXT',
                 parent: cat.parentID,
                 permissionOverwrites: [
                     {
@@ -296,7 +296,7 @@ await msg.edit("Creating Bots Channels...")
                     }]
             }).then(cat => {
               message.guild.channels.create('🤖 || Bot-Commands ', {
-                type: 'GUILD_VOICE',
+                type: 'GUILD_TEXT',
                 parent: cat.parentID,
                 permissionOverwrites: [
                     {
@@ -308,7 +308,7 @@ await msg.edit("Creating Bots Channels...")
                 // cat.setPosition('0')
               })
               message.guild.channels.create('❗ || Levels ', {
-                type: 'GUILD_VOICE',
+                type: 'GUILD_TEXT',
                 parent: cat.parentID,
                 permissionOverwrites: [
                     {
@@ -335,7 +335,7 @@ message.guild.channels.create('Extras ', {
                     }]
             }).then(cat => {
               message.guild.channels.create('💩 || Spamming ', {
-                type: 'GUILD_VOICE',
+                type: 'GUILD_TEXT',
                 parent: cat.parentID,
                 permissionOverwrites: [
                     {
@@ -347,7 +347,7 @@ message.guild.channels.create('Extras ', {
                 // cat.setPosition('0')
               })
               message.guild.channels.create('📺 || Self-Promo ', {
-                type: 'GUILD_VOICE',
+                type: 'GUILD_TEXT',
                 parent: cat.parentID,
                 permissionOverwrites: [
                     {
