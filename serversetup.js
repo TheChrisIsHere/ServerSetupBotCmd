@@ -1,21 +1,18 @@
+callback: async ({ message, args }) => {
 
-  callback: ({ message, args }) => {
-
-    message.channel.send("Setting A Basic Server...")
+    const msg = await message.channel.send("Setting A Basic Server...")
 
 
-    message.channel.send("Creating Roles...")
+    //Code
+ //time in milliseconds
+     await msg.edit("Creating Roles...")
 //Creating Roles
+
 message.guild.roles.create({
     name: 'Admin',
-    position: 6,
-    permissions: ["ADMINISTRATOR"],
-})
-message.guild.roles.create({
-    name: 'Big Pro Ppl (Friends) ',
     position: 5,
     permissions: ["ADMINISTRATOR"],
-    })
+})
 message.guild.roles.create({
     name: 'Head Mod',
     position: 4,
@@ -30,34 +27,40 @@ message.guild.roles.create({
     position: 2,
     permissions: ["ADMINISTRATOR"],
 })
-message.guild.roles.create({
+await message.guild.roles.create({
     name: 'Members',
     position: 1,
     // permissions: ["ADMINISTRATOR"],
 })
 
-message.channel.send("Created Basic Roles")
-let admin = message.guild.roles.cache.find(role => role.name.toLowerCase() === 'admin')
 
-let bpp = message.guild.roles.cache.find(role => role.name.toLowerCase() === 'big pro ppl (friends)')
 
-let hmod = message.guild.roles.cache.find(role => role.name.toLowerCase() === 'head mod')
 
-let mod = message.guild.roles.cache.find(role => role.name.toLowerCase() === 'mod')
 
-let staff = message.guild.roles.cache.find(role => role.name.toLowerCase() === 'staff')
+  await msg.edit("Created Basic Roles")
 
-let members = message.guild.roles.cache.find(role => role.name.toLowerCase() === 'members')
+ 
+    //Code
+  //time in milliseconds
 
-// if (!role) {
-// message.channel.send("BRUH")
-// }else{
-// message.channel.send(role.id)
-// }
 
-message.channel.send("Creating Welcome Channels...")
+const admin = message.guild.roles.cache.find(role => role.name.toLowerCase() === 'admin')
+
+
+const hmod = message.guild.roles.cache.find(role => role.name.toLowerCase() === 'head mod')
+
+const mod = message.guild.roles.cache.find(role => role.name.toLowerCase() === 'mod')
+
+const staff = message.guild.roles.cache.find(role => role.name.toLowerCase() === 'staff')
+
+const members = message.guild.roles.cache.find(role => role.name.toLowerCase() === 'members')
+
+    //Code
+  //time in milliseconds
+
+await msg.edit("Creating Welcome Channels...")
 // Creating Channels
-    message.guild.channels.create('Welcome And Bye-Bye ', {
+    await message.guild.channels.create('Welcome And Bye-Bye ', {
                 type: 'GUILD_CATEGORY',
                 position: 0,
                 permissionOverwrites: [
@@ -136,12 +139,12 @@ Aside from these rules, if you think something is bad but it's not in the rules,
 15. And Most Important, No BlazeVerse Retards Allowed**`)
               })
 
-message.channel.send("Created Welcome Category")
+msg.edit("Created Welcome Category")
               
             })
 
 
-            message.channel.send("Creating Dashboard Channels...")
+            await message.channel.send("Creating Dashboard Channels...")
               message.guild.channels.create('Dashboard ', {
                 type: 'GUILD_CATEGORY',
                 position: 1,
@@ -185,11 +188,11 @@ message.channel.send("Created Welcome Category")
               }).then(dog => {
                 dog.setParent(cat.id)
                  cat.setPosition('1')
-message.channel.send("Created Dashboard Category")
+msg.edit("Created Dashboard Category")
 
               })
               })
-message.channel.send("Creating General Channels...")
+await msg.edit("Creating General Channels...")
               message.guild.channels.create('General ', {
                 type: 'GUILD_CATEGORY',
                 position: 1,
@@ -238,8 +241,8 @@ message.channel.send("Creating General Channels...")
               })
               })
 
-              message.channel.send("Created General Category...")
-message.channel.send("Creating Music Channels...")
+              await msg.edit("Created General Category...")
+await msg.edit("Creating Music Channels...")
               message.guild.channels.create('Music ', {
                 type: 'GUILD_CATEGORY',
                 position: 1,
@@ -277,12 +280,12 @@ message.channel.send("Creating Music Channels...")
 
 
 
-message.channel.send("Created Music Category")
+await msg.edit("Created Music Category")
 
 
 
 
-message.channel.send("Creating Bots Channels...")
+await msg.edit("Creating Bots Channels...")
               message.guild.channels.create('Bots ', {
                 type: 'GUILD_CATEGORY',
                 position: 1,
@@ -318,8 +321,8 @@ message.channel.send("Creating Bots Channels...")
               })
               
             })
-            message.channel.send("Created Bots Category")
-message.channel.send("Creating Extras Channels...")
+            await msg.edit("Created Bots Category")
+await msg.edit("Creating Extras Channels...")
 
 
 message.guild.channels.create('Extras ', {
@@ -358,9 +361,9 @@ message.guild.channels.create('Extras ', {
               
             })
 
-            message.channel.send("Created Extras Category")
+            await msg.edit("Created Extras Category")
 
-            message.channel.send("Assigning All Roles To Channels...")
+            await msg.edit("Assigning All Roles To Channels...")
 setTimeout(function(){ 
     //Code
  }, 5000); //time in milliseconds
@@ -370,9 +373,7 @@ setTimeout(function(){
  }, 5000); //time in milliseconds
             message.channel.send("**Now You May Wanna Invite Some Bots \n  Invite YeagaBot For Music Bot From -\n  https://discord.com/api/oauth2/authorize?client_id=888078499376680992&permissions=8&scope=bot \n \n Invite Historia For Moderation And Fun Bot Even With Chat Bot Feature From - \n https://discord.com/api/oauth2/authorize?client_id=924906471160971306&permissions=8&scope=bot%20applications.commands**")
 
-setTimeout(function(){ 
-    //Code
- }, 5000); //time in milliseconds
+ //time in milliseconds
             message.channel.send("Also Assign Roles To Anyone From Settings And Delete These Starting General VCs And Channels!!**")
 
               
@@ -399,6 +400,3 @@ setTimeout(function(){
             
             
             }
-
-
-  
